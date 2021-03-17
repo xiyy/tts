@@ -1,88 +1,122 @@
 package com.xi.liuliu.tts.view;
 
 import android.app.Activity;
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.os.Bundle;
-import android.util.Log;
+import android.widget.RadioGroup;
 
-import com.sogou.tts.offline.TTSPlayer;
-import com.sogou.tts.offline.listener.TTSPlayerListener;
 import com.xi.liuliu.tts.R;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class MainActivity extends Activity {
-    static final String TAG = MainActivity.class.getSimpleName();
-     TTSPlayer ttsPlayer;
-    private List<String> textList = new ArrayList<>(4);
-
+    private static final String TAG = MainActivity.class.getSimpleName();
+    private RadioGroup mNavigatorRg;
+    private MakeFragment mMakeFragment;
+    private WorkFragment mWorkFragment;
+    private MineFragment mMineFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        System.loadLibrary("ttsoff");
-        textList.add("春眠不觉晓，处处闻啼鸟，夜来风雨声，花落知多少。hello ,what's the weather like today?");
+        initView();
 
-        ttsPlayer = new TTSPlayer(false);
-        int initResult = ttsPlayer.initFromAssets(this.getApplicationContext(),new TTSEventListener(),"dict.dat","snd-zsh.dat");
-        if (initResult>=0) {
-            ttsPlayer.setStreamType(TTSPlayer.STREAM_MUSIC);
-            ttsPlayer.setSpeed(4);
-            ttsPlayer.play(textList,"");
+    }
+
+    private void initView() {
+        mNavigatorRg = findViewById(R.id.ma_rg_navigator);
+        mNavigatorRg.setOnCheckedChangeListener((group, checkedId) -> {
+            switch (checkedId) {
+                case R.id.ma_rbt_navigator_make:
+                    showFragment(Navigator.Navigator_Make);
+                    break;
+                case R.id.ma_rbt_navigator_work:
+                    showFragment(Navigator.Navigator_Work);
+                    break;
+                case R.id.ma_rbt_navigator_mine:
+                    showFragment(Navigator.Navigator_Mine);
+                    break;
+            }
+        });
+    }
+
+    private void showFragment(Navigator navigator) {
+        FragmentManager fragmentManager = getFragmentManager();
+        FragmentTransaction transaction = fragmentManager.beginTransaction();
+        hideFragment(transaction);
+        switch (navigator) {
+            case Navigator_Make:
+                if (mMakeFragment == null) {
+                    mMakeFragment = new MakeFragment();
+                    transaction.add(R.id.ma_flt_fragment, mMakeFragment);
+                } else {
+                    transaction.show(mMakeFragment);
+                }
+                break;
+            case Navigator_Work:
+                if (mWorkFragment == null) {
+                    mWorkFragment = new WorkFragment();
+                    transaction.add(R.id.ma_flt_fragment, mWorkFragment);
+                } else {
+                    transaction.show(mWorkFragment);
+                }
+                break;
+            case Navigator_Mine:
+                if (mMineFragment == null) {
+                    mMineFragment = new MineFragment();
+                    transaction.add(R.id.ma_flt_fragment, mMineFragment);
+                } else {
+                    transaction.show(mMineFragment);
+                }
+                break;
+        }
+        transaction.commit();
+    }
+
+    private void hideFragment(FragmentTransaction fragmentTransaction) {
+        if (fragmentTransaction != null) {
+            if (mMakeFragment != null) {
+                fragmentTransaction.hide(mMakeFragment);
+            }
+            if (mWorkFragment != null) {
+                fragmentTransaction.hide(mWorkFragment);
+            }
+            if (mMineFragment != null) {
+                fragmentTransaction.hide(mMineFragment);
+            }
         }
     }
 
-     class TTSEventListener implements TTSPlayerListener {
+    enum Navigator {
+        Navigator_Make,
+        Navigator_Work,
+        Navigator_Mine
+    }
 
-        @Override
-        public void onInit(boolean b) {
-            Log.d(TAG,"onInit,result:"+b);
-        }
+    @Override
+    protected void onStart() {
+        super.onStart();
+    }
 
-        @Override
-        public void onStart() {
-            Log.d(TAG,"onStart");
-        }
+    @Override
+    protected void onResume() {
+        super.onResume();
+    }
 
-        @Override
-        public void onSpeakProgress(Float aFloat) {
-            Log.d(TAG,"onSpeakProgress,"+aFloat);
-        }
+    @Override
+    protected void onPause() {
+        super.onPause();
 
-        @Override
-        public void onSpeakSentenceProgress(List<String> list, int i) {
-            Log.d(TAG,"onSpeakSentenceProgress,currentSentence:"+list.get(i));
-        }
+    }
 
-        @Override
-        public void onSegSyn(byte[] bytes) {
-            Log.d(TAG,"onSegSyn,bytes:"+bytes);
-        }
+    @Override
+    protected void onStop() {
+        super.onStop();
 
-        @Override
-        public void onEnd() {
-            Log.d(TAG,"onEnd");
-        }
+    }
 
-        @Override
-        public void onError(int i) {
-            Log.e(TAG,"onError,i:"+i);
-        }
-
-        @Override
-        public void onPause() {
-            Log.d(TAG,"onPause");
-        }
-
-        @Override
-        public void onSynEnd(Float aFloat) {
-            Log.d(TAG,"onSynEnd,"+aFloat);
-        }
-
-        @Override
-        public void onRelease(boolean b) {
-            Log.d(TAG,"onRelease,"+b);
-        }
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
     }
 }

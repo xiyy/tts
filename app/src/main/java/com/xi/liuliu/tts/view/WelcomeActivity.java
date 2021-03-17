@@ -32,7 +32,7 @@ public class WelcomeActivity extends Activity {
                 mIvWelcome.setImageResource(R.drawable.welcome_girl);
                 break;
             case 1:
-                mIvWelcome.setImageResource(R.drawable.welcome_nature);
+                mIvWelcome.setImageResource(R.drawable.welcome_lighthouse);
                 break;
             default:
                 mIvWelcome.setImageResource(R.drawable.welcome_road);
