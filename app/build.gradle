@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         applicationId "com.xi.liuliu.tts"
-        minSdkVersion 14
+        minSdkVersion 16
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
@@ -44,6 +44,7 @@ dependencies {
     implementation "io.reactivex.rxjava3:rxjava:3.0.11"
     compile 'com.alibaba:fastjson:1.1.72.android'
     debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.6'
+    implementation 'com.tencent:mmkv-static:1.2.7'
 
 }
 

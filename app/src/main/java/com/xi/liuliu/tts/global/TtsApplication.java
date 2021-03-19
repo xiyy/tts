@@ -7,6 +7,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import com.tencent.mmkv.MMKV;
 import com.xi.liuliu.tts.util.LogUtil;
 
 public class TtsApplication extends Application {
@@ -56,5 +57,7 @@ public class TtsApplication extends Application {
                 LogUtil.log(activity.getClass().getSimpleName(),"onActivityDestroyed");
             }
         });
+        String rootDir = MMKV.initialize(this);
+        LogUtil.log("mmkv rootDir:"+rootDir);
     }
 }
