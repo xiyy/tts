@@ -38,6 +38,7 @@ public class MainActivity extends Activity {
                     break;
             }
         });
+        showFragment(Navigator.Navigator_Make);
     }
 
     private void showFragment(Navigator navigator) {

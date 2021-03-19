@@ -3,4 +3,8 @@
     <string name="main_navigator_make">制作</string>
     <string name="main_navigator_works">我的作品</string>
     <string name="main_navigator_user">用户中心</string>
+    <string name="make_fragment_export_mp3">导出mp3文件</string>
+    <string name="make_fragment_ocr_take_pic">拍照朗读</string>
+    <string name="make_fragment_ocr_to_audio">图片秒变语音</string>
+    <string name="make_fragment_contact_us">联系我们</string>
 </resources>

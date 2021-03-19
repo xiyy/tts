@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:background="@drawable/make_fragment_tts_ocr_shape"
+    android:layout_marginBottom="8dp">
+
+    <ImageView
+        android:id="@+id/item_tts_category_iv"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="8dp"
+        android:background="@drawable/make_fragment_category_1"></ImageView>
+
+    <TextView
+        android:id="@+id/item_tts_category_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="25dp"
+        android:layout_toRightOf="@+id/item_tts_category_iv"
+        android:text="美食餐饮"
+        android:textSize="12sp"></TextView>
+
+    <Button
+        android:id="@+id/item_tts_category_bt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/icon_arrow_right"></Button>
+
+
+</RelativeLayout>
