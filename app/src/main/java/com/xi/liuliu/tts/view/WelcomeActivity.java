@@ -3,7 +3,10 @@ package com.xi.liuliu.tts.view;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.KeyEvent;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
@@ -15,7 +18,9 @@ import java.util.Random;
 
 public class WelcomeActivity extends Activity {
     private ImageView mIvWelcome;
-    static final long mDelayTime = 1500;
+    static final long mDelayTime = 500;
+    private Animation mFadeIn;
+    private Animation mFadeScale;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,11 +43,48 @@ public class WelcomeActivity extends Activity {
                 mIvWelcome.setImageResource(R.drawable.welcome_road);
 
         }
-        mIvWelcome.postDelayed(() -> {
-            Intent intent = new Intent(WelcomeActivity.this,MainActivity.class);
-            startActivity(intent);
-            finish();
-        },mDelayTime);
+
+        mFadeIn = AnimationUtils.loadAnimation(this, R.anim.welcome_fade_in);
+        mFadeIn.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                mIvWelcome.startAnimation(mFadeScale);
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+
+            }
+        });
+        mFadeScale = AnimationUtils.loadAnimation(this, R.anim.welcome_fade_in_scale);
+        mFadeScale.setFillAfter(true);
+        mFadeScale.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                Handler handler = new Handler();
+                handler.postDelayed(() -> {
+                    Intent intent = new Intent(WelcomeActivity.this, MainActivity.class);
+                    startActivity(intent);
+                    finish();
+                }, mDelayTime);
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+
+            }
+        });
+        mIvWelcome.startAnimation(mFadeIn);
     }
 
     @Override

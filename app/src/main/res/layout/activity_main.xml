@@ -19,8 +19,7 @@
         android:background="@color/grey13"
         android:id="@+id/ma_rg_navigator"
         android:layout_width="match_parent"
-        android:layout_height="46dp"
-        android:layout_marginBottom="2dp"
+        android:layout_height="52dp"
         android:layout_weight="0"
         android:orientation="horizontal">
 
