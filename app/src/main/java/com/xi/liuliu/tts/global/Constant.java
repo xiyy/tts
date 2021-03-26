@@ -51,5 +51,7 @@ public interface Constant {
 
     };
 
+    String KEY_USER_PROTOCOL = "key_user_protocol";
+
 
 }

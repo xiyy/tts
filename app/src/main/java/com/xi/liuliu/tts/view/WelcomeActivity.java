@@ -12,8 +12,11 @@ import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import com.tencent.mmkv.MMKV;
 import com.xi.liuliu.tts.R;
+import com.xi.liuliu.tts.global.Constant;
 
+import java.lang.ref.WeakReference;
 import java.util.Random;
 
 public class WelcomeActivity extends Activity {
@@ -21,6 +24,7 @@ public class WelcomeActivity extends Activity {
     static final long mDelayTime = 500;
     private Animation mFadeIn;
     private Animation mFadeScale;
+    private UserProtocolDialog mUserProtocolDialog;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -71,12 +75,18 @@ public class WelcomeActivity extends Activity {
 
             @Override
             public void onAnimationEnd(Animation animation) {
-                Handler handler = new Handler();
-                handler.postDelayed(() -> {
-                    Intent intent = new Intent(WelcomeActivity.this, MainActivity.class);
-                    startActivity(intent);
-                    finish();
-                }, mDelayTime);
+                mIvWelcome.postDelayed(() -> {
+                    if (MMKV.defaultMMKV().getBoolean(Constant.KEY_USER_PROTOCOL,false)) {
+                        Intent intent = new Intent(WelcomeActivity.this, MainActivity.class);
+                        startActivity(intent);
+                        finish();
+                    }else {
+                        if (mUserProtocolDialog==null) {
+                            mUserProtocolDialog = new UserProtocolDialog(new WeakReference<>(WelcomeActivity.this));
+                        }
+                        mUserProtocolDialog.show();
+                    }
+                },mDelayTime);
             }
 
             @Override

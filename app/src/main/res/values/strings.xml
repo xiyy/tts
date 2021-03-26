@@ -1,4 +1,12 @@
 <resources>
+    <string name="privacy_user_protocol">用户信息保护政策</string>
+    <string name="privacy_user_protocol_content">
+         感谢您使用文字转语音软件，在使用我们的软件前请您仔细阅读《隐私政策》及《用户协议》、为保证您可以正常使用本软件
+        所有功能，请同意我们的协议。
+    </string>
+    <string name="privacy_user_protocol_agree">同意并继续</string>
+    <string name="privacy_user_protocol_exit">不同意并退出应用</string>
+
     <string name="app_name">文字转语音</string>
     <string name="main_navigator_make">制作</string>
     <string name="main_navigator_works">我的作品</string>
