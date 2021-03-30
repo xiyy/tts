@@ -28,12 +28,14 @@
             android:layout_centerVertical="true"
             android:layout_marginRight="8dp"
             android:background="@drawable/make_fragment_contact_us_shape"
-            android:drawableLeft="@drawable/make_fragment_contact_us"
+            android:drawableLeft="@drawable/make_fragment_contact_us_2"
             android:gravity="center"
-            android:paddingLeft="5dp"
+            android:paddingLeft="8dp"
             android:paddingTop="3dp"
-            android:paddingRight="5dp"
+            android:paddingRight="8dp"
             android:paddingBottom="3dp"
+            android:drawablePadding="5dp"
+            android:textColor="@color/white"
             android:text="@string/make_fragment_contact_us"
             android:textSize="11sp"></TextView>
     </RelativeLayout>

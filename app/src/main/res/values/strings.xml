@@ -16,9 +16,12 @@
     <string name="make_fragment_ocr_take_pic">拍照朗读</string>
     <string name="make_fragment_ocr_to_audio">图片秒变语音</string>
     <string name="make_fragment_contact_us">联系我们</string>
+    <string name="category_list_activity_title_delicacy">美食餐饮</string>
+    <string name="item_category_example_upload">导入</string>
+    <string name="item_category_example_audition">试听</string>
 
     <string name="work_fragment_nothing">没有任何作品～</string>
-    <string name="work_fragment_manage" >管理</string>
+    <string name="work_fragment_manage">管理</string>
 
 
     <string name="mine_fragment_login">点击登录</string>

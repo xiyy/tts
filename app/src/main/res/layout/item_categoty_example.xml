@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/item_category_example_portrait_iv"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="8dp"
+            android:background="@drawable/model_women_tian"></ImageView>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/item_category_example_title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="烧烤广告"
+                android:textColor="@color/grey_dark"
+                android:textSize="15sp"></TextView>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/item_category_example_model_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="配音的人"
+                    android:textSize="13sp"></TextView>
+
+                <TextView
+                    android:id="@+id/item_category_example_bgm_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:text="背景音乐"
+                    android:textSize="13sp"></TextView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/item_category_example_upload_iv"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/item_category_example_export"></ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/item_category_example_upload"
+                android:textSize="13sp"></TextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="15dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/item_category_example__audition_iv"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/item_category_example_play"></ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/item_category_example_audition"
+                android:textSize="13sp"></TextView>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="@color/grey_split_line"></View>
+
+</LinearLayout>

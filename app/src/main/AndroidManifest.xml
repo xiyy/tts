@@ -3,7 +3,6 @@
     package="com.xi.liuliu.tts">
 
     <application
-
         android:name=".global.TtsApplication"
         android:allowBackup="true"
         android:icon="@drawable/logo"
@@ -11,16 +10,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
-        <activity android:name=".view.MainActivity">
-
-        </activity>
+        <activity android:name=".view.CategoryListActivity"></activity>
+        <activity android:name=".view.MainActivity"></activity>
         <activity android:name=".view.WelcomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
     </application>
 

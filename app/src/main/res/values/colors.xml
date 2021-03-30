@@ -31,7 +31,6 @@
     <color name="grey26">#767778</color>
     <color name="grey27">#E0E0E0</color>
     <color name="grey28">#C9C9C9</color>
-    <color name="grey29">#969696</color>
     <color name="grey30">#F1F1F1</color>
     <color name="grey31">#C7C7CC</color>
     <color name="grey32">#F7F7F7</color>
@@ -40,6 +39,8 @@
     <color name="gray_light_1">#F0F0F0</color>
     <color name="grey_dark">#808080</color>
     <color name="grey_split_line">#E3E3E3</color>
+    <!-- 带透明度  -->
+    <color name="grey29">#4D969696</color>
 
     <color name="red1">#FF5150</color>
     <color name="red2">#7F252C</color>
@@ -86,6 +87,8 @@
     <color name="black9">#1C1C1C</color>
     <color name="black10">#282828</color>
     <color name="black11">#404040</color>
+    <!---  带透明度 -->
+    <color name="black12">#CC404040</color>
     <color name="share_item_pressed">#55000000</color>
     <color name="TRANSPARENT">#00000000</color>
     <color name="photo_browser_dialog_bg">#000000</color>

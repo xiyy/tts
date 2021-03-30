@@ -1,6 +1,7 @@
 package com.xi.liuliu.tts.view;
 
 import android.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -63,5 +64,8 @@ public class MakeFragment extends Fragment implements View.OnClickListener, OnIt
     @Override
     public void OnItemClick(View view, int position) {
         LogUtil.log(TAG,"OnItemClick,position:"+position);
+        Intent intent = new Intent(getActivity(),CategoryListActivity.class);
+        intent.putExtra("categoryPosition",position);
+        startActivity(intent);
     }
 }
