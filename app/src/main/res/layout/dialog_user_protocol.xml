@@ -8,24 +8,13 @@
     >
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:layout_marginBottom="15dp"
-        android:gravity="center"
-        android:text="@string/privacy_user_protocol"
-        android:textSize="15sp"
-        android:textColor="@color/grey3">
-
-
-    </TextView>
-
-    <TextView
+        android:id="@+id/dup_tv_protocol_content"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
-        android:text="@string/privacy_user_protocol_content"
+        android:text="@string/protocol_user"
         android:textSize="13sp"></TextView>
 
     <TextView

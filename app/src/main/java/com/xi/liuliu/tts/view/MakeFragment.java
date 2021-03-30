@@ -56,7 +56,8 @@ public class MakeFragment extends Fragment implements View.OnClickListener, OnIt
 
                 break;
             case R.id.mf_tv_contact_us:
-
+                Intent intent = new Intent(getActivity(),ContactUsActivity.class);
+                startActivity(intent);
                 break;
         }
     }
