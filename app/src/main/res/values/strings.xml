@@ -27,4 +27,12 @@
     <string name="mine_fragment_setting">设置</string>
     <string name="mine_fragment_about_us">关于</string>
 
+    <string name="tts_activity_title">编辑内容</string>
+    <string name="tts_activity_play_speed">朗读速度</string>
+    <string name="tts_activity_start">开始合成</string>
+    <string name="tts_activity_default_text">手机广告是通过移动媒体传播的付费信息，旨在通过这些商业信息影响受传者的态度、意图和行为，实际上就是一种互动式的网络广告.它由移动通信网承载，具有网络媒体的一切特征，由于移动性使用户能够随时随地接受信息，所以比互联网更具优势.
+    随着我国手机用户普及率的逐渐提高，手机作为一种新型媒体的应用价值也日益凸现。手机媒体拥有其它媒体无法比拟的优势，例如覆盖人群最广、传播成本比较低廉、可以最方便地把人们的零碎时间利用起来，并且能够极为快捷地传播信息.
+        随着移动通信技术的发展，3G服务模式的不断明朗化，移动衍生出的服务模式进入推陈出新的更迭阶段。借助被称为“第5媒体” 的手机，“手机广告”一词开始频繁曝光。据美国市场研究公司Visiongain的市场报告表示，在3年后，美国和欧洲手机广告市场将达到10亿美元左右。2006年初，中国移动等运营商也已在尝试开展手机互动营销，开始试点手机广告业务。
+    </string>
+
 </resources>

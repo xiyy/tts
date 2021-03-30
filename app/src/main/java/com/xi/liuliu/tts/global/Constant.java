@@ -52,10 +52,7 @@ public interface Constant {
 
     };
 
-    String KEY_USER_PROTOCOL = "key_user_protocol";
-    String KEY_PROTOCOL_TYPE = "protocol_type";
-    int PROTOCOL_USER = 1;
-   int PROTOCOL_PRIVACY = 2;
+
 
     List<String> soundModelNameList = new ArrayList<String>() {
         {
@@ -191,4 +188,15 @@ public interface Constant {
     String urlContactUs = "https://mrbei-contact.carrd.co/";
     String urlPrivacy = "https://mrbei-tts-privacy.carrd.co/";
     String urlUserProtocol = "https://mrbei-tts-userprotocol.carrd.co/";
+
+
+
+
+
+
+    String KEY_USER_PROTOCOL = "key_user_protocol";
+    String KEY_PROTOCOL_TYPE = "protocol_type";
+    int PROTOCOL_USER = 1;
+    int PROTOCOL_PRIVACY = 2;
+    String KEY_CATEGORY_POSITION = "categoryPosition";
 }

@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.xi.liuliu.tts.R;
 import com.xi.liuliu.tts.adapter.TtsCategoryItemAdapter;
+import com.xi.liuliu.tts.global.Constant;
 import com.xi.liuliu.tts.impl.OnItemClickListener;
 import com.xi.liuliu.tts.util.LogUtil;
 
@@ -50,7 +51,8 @@ public class MakeFragment extends Fragment implements View.OnClickListener, OnIt
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.fnm_rl_tts:
-
+                Intent ttsIntent = new Intent(getActivity(),TtsActivity.class);
+                startActivity(ttsIntent);
                 break;
             case R.id.fnm_rl_ocr:
 
@@ -66,7 +68,7 @@ public class MakeFragment extends Fragment implements View.OnClickListener, OnIt
     public void OnItemClick(View view, int position) {
         LogUtil.log(TAG,"OnItemClick,position:"+position);
         Intent intent = new Intent(getActivity(),CategoryListActivity.class);
-        intent.putExtra("categoryPosition",position);
+        intent.putExtra(Constant.KEY_CATEGORY_POSITION,position);
         startActivity(intent);
     }
 }

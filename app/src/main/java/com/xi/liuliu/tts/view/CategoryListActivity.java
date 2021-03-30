@@ -31,7 +31,7 @@ public class CategoryListActivity extends Activity implements View.OnClickListen
         mBackBtn = findViewById(R.id.cla_btn_go_back);
         mBackBtn.setOnClickListener(this);
         mCategoryTitleTv = findViewById(R.id.cla_tv_title);
-        int position = getIntent().getIntExtra("categoryPosition",0);
+        int position = getIntent().getIntExtra(Constant.KEY_CATEGORY_POSITION,0);
         mCategoryTitleTv.setText(Constant.ttsCategoryList.get(position));
         mListRv = findViewById(R.id.cla_rv_list);
         mListRv.setLayoutManager(new LinearLayoutManager(this));
