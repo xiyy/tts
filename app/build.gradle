@@ -1,4 +1,6 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
 
 android {
     compileSdkVersion 30
@@ -43,7 +45,7 @@ dependencies {
     implementation "io.reactivex.rxjava3:rxjava:3.0.11"
     compile 'com.alibaba:fastjson:1.1.72.android'
     debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.6'
-
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }
 
 repositories {
